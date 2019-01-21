@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<head>
+<base href="https://rawgit.com/rtalbot89/flow-svg/gh-pages/" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<script src="example/jquery-2.1.3.min.js"></script>
+<script src="example/jquery.scrollTo.min.js"></script>
+
+<script src="example/svg.js"></script>
+<script src="dist/flowsvg.min.js"></script>
+
+<style>
+a:hover {
+    text-decoration:underline;
+}
+h1 {
+	font-family:sans-serif;
+    text-align:center;
+}
+h3 {
+	font-family:sans-serif;
+    text-align:center;
+}
+img {
+	width: 100%;
+}
+</style>
+
+</head>
+<body>
+	<h1>派錢4000蚊，你有冇份攞？</h1>
+	<h3>觀塘康樂區社區主任 陳嘉言團隊製作</h3>
+    <br> </br>
+<div id="drawing" style="margin-left:20px;"></div>
+<p style="text-align: left; padding-left: 30px;"><strong><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 24pt;">申請方法：</span></span></strong></p>
+<p style="text-align: left; padding-left: 30px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">2019年2月1日至4月30日接受申請，</span><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">須填寫申請表格，連同<span style="background-color: #ffff00;">身份證副本</span>、<span style="background-color: #ffff00;">地址證明副本</span></span></p>
+<p style="text-align: left; padding-left: 30px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">（申請前3個月內發出的水費單、徵收差餉通知書、電費單、煤氣費單、銀行月結單、</span></p>
+<p style="text-align: left; padding-left: 30px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">信用卡帳單或電話費帳單等）及<span style="background-color: #ffff00;">戶口編號證明副本</span>（銀行存摺首頁、提款卡或銀行月結</span></p>
+<p style="text-align: left; padding-left: 30px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">單等）<strong><span style="text-decoration: underline;">郵寄到在職家庭津貼辦事處</span></strong>（地址：旺角郵政局郵箱2600號）</span><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">。詳細資料可參閱</span></p>
+<p style="text-align: left; padding-left: 30px;"><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">「</span><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">關愛共享計劃」的網頁，大家</span><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">亦可於民政處索取表格，協助申請或查詢疑問。</span><br /><br /><span style="color: #ff0000; font-family: arial, helvetica, sans-serif; font-size: 14pt;">*留意每個人(包括夫婦)須個別提出申請，獨立地接受資格審核。</span></p>
+<script>
+///////////////////// start flow chart ////////////////////////////////////////////////////////////
+    flowSVG.draw(SVG('drawing').size(2000, 1900));
+    flowSVG.config({
+        interactive: true,
+        showButtons: true,
+        connectorLength: 60,
+        scrollto: true,
+    });
+    flowSVG.shapes(
+        [   
+            {
+			label: '18?',
+			type: 'decision',
+			text: ['年滿18歲？'],
+			yes: '18',
+			no: 'Not18'
+		    }, 
+
+            {
+			label: '18',
+			type: 'decision',
+			text: ['持香港居民身份證？',
+				   '(包括新來港人士)'],
+			yes: 'HaveID',
+			no: 'NothaveID'
+		    }, 
+
+            {
+			label: 'Not18',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    }, 
+
+            {
+			label: 'HaveID',
+			type: 'decision',
+			text: ['通常居住於香港？',
+				   '(包括出外讀書)'],
+			yes: 'LongliveHK',
+			no: 'NotlongliveHK'
+		    }, 
+
+            {
+			label: 'NothaveID',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    }, 
+
+            {
+			label: 'LongliveHK',
+			type: 'decision',
+			text: ['領取綜援、長生津、',
+                   '高齡津貼或傷殘津貼？'],
+			yes: 'Getsubsidy',
+			no: 'Notgetsubsidy'
+		    },
+            
+            {
+			label: 'NotlongliveHK',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    }, 
+
+            {
+			label: 'Getsubsidy',
+			type: 'finish',
+			text: ['4000元已於18年6月包含',
+                   '在「雙糧」裡面出比你'],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+            {
+			label: 'Notgetsubsidy',
+			type: 'decision',
+			text: ['在香港有物業？'],
+			yes: 'Haveproperty',
+			no: 'Nothaveproperty'
+		    },
+
+            {
+			label: 'Haveproperty',
+			type: 'decision',
+			text: ['只有一所自住的私人物業？'],
+			yes: 'Oneproperty',
+			no: 'Notoneproperty'
+		    },
+
+            {
+			label: 'Nothaveproperty',
+			type: 'decision',
+			text: ['要交薪俸稅？'],
+			yes: 'Needtax',
+			no: 'Noneedtax'
+		    },
+
+            {
+			label: 'Oneproperty',
+			type: 'decision',
+			text: ['2018-19年度差餉寬減',
+                   '額合計少於4000元？'],
+			yes: 'Needtax2',
+			no: 'Morethan4000'
+		    },
+
+            {
+			label: 'Notoneproperty',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+            {
+			label: 'Needtax',
+			type: 'decision',
+			text: ['2017-18年度薪俸稅',
+                   '退稅額少於4000元？',
+				   '(薪俸稅退稅額 = ',
+				   '交稅金額 X 3)'],
+			yes: 'Lessthan4000',
+			no: 'Notlessthan4000'
+		    },
+
+            {
+			label: 'Noneedtax',
+			type: 'finish',
+			text: ['恭喜你有4000元啊！'],
+            links:[
+                    {
+                        text: '申請文件', 
+                        url: 'https://www.wfsfaa.gov.hk/careandshare/tc/downloadable.htm',
+                        // Optional target
+                        target: '_blank'
+                    }
+                  ],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+			{
+			label: 'Lessthan4000',
+			type: 'finish',
+			text: ['恭喜你有',
+				   '(4000 - 薪俸稅退稅額)',
+				   '元啊！'],
+			links:[
+                    {
+                        text: '申請文件', 
+                        url: 'https://www.wfsfaa.gov.hk/careandshare/tc/downloadable.htm',
+                        // Optional target
+                        target: '_blank'
+                    }
+                  ],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+			{
+			label: 'Notlessthan4000',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+			{
+			label: 'Needtax2',
+			type: 'decision',
+			text: ['要交薪俸稅？'],
+			yes: 'Sftaxlessthan4000',
+			no: 'Result'
+		    },
+
+			{
+			label: 'Morethan4000',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+			{
+			label: 'Sftaxlessthan4000',
+			type: 'decision',
+			text: ['2017-18年度薪',
+				   '俸稅退稅+2018-19', 
+				   '年度差餉寬減 < 4000元？',
+				   '(薪俸稅退稅額 = ',
+				   '交稅金額 X 3)'],
+			yes: 'Sumlessthan4000',
+			no: 'Summorethan4000'
+			},
+
+			{
+			label: 'Sumlessthan4000',
+			type: 'finish',
+			text: ['恭喜你有',
+				   '(4000 - 薪俸稅退稅額',
+				   '- 差餉寬減額)元啊！'],
+			links:[
+                {
+                    text: '申請文件', 
+                    url: 'https://www.wfsfaa.gov.hk/careandshare/tc/downloadable.htm',
+                    // Optional target
+                    target: '_blank'
+                }
+            ],
+			yes: 'Finish',
+			no: 'Finish'
+			},
+
+			{
+			label: 'Summorethan4000',
+			type: 'finish',
+			text: ['得0元'],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+			{
+			label: 'Result',
+			type: 'finish',
+			text: ['恭喜你有',
+				   '(4000 - 差餉寬減額)',
+				   '元啊！'],
+			links:[
+                {
+                    text: '申請文件', 
+                    url: 'https://www.wfsfaa.gov.hk/careandshare/tc/downloadable.htm',
+                    // Optional target
+                    target: '_blank'
+                }
+            ],
+			yes: 'Finish',
+			no: 'Finish'
+		    },
+
+    ]);
+</script>
+</body></html>
