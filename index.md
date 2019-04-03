@@ -1,5 +1,14 @@
 ## Welcome to The CyberPeak!
 
+# Project Information
+- Student No:	54412731
+- Student Name:	SIN, Bo Chi
+- CityU Email:	bosin2-c@my.cityu.edu.hk
+
+- Project Code:	WMT-02
+- Project Supervisor:	WMT - Dr TSANG, Peter W M
+- Project Title: Development of Cyberworld on the internet (2)
+
 ## Introduction
 Many people said that "If you haven’t been up The Peak, you haven’t been to Hong Kong.". In order to provide preliminary experience for attracting visitors, the purpose of the project was to build a cyberworld of one of the most famous Hong Kong's tourist spot - "The Peak". 
 
