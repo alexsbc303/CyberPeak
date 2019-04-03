@@ -24,7 +24,9 @@ The implemented methodologies include three aspects:
 The result of the project can bring a fruitful experience to people by three reasons: 
 - Realistic attempt of Peak Tram riding
 - Navigate freely around Peak Tower
-- 360-degree sightseeing from different viewpoints. It is hoped that this project can help foreigners know more about The Peak.
+- 360-degree sightseeing from different viewpoints. 
+
+It is hoped that this project can help foreigners know more about The Peak.
 
 ## Demo
 <https://bit.ly/2VetImh>
