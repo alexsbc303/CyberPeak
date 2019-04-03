@@ -1,6 +1,6 @@
 ## Welcome to The CyberPeak!
 
-# Project Information
+## Project Information
 - Student No:	54412731
 - Student Name:	SIN, Bo Chi
 - CityU Email:	bosin2-c@my.cityu.edu.hk
