@@ -4,7 +4,6 @@
 - Student No:	54412731
 - Student Name:	SIN, Bo Chi
 - CityU Email:	bosin2-c@my.cityu.edu.hk
-
 - Project Code:	WMT-02
 - Project Supervisor:	WMT - Dr TSANG, Peter W M
 - Project Title: Development of Cyberworld on the internet (2)
