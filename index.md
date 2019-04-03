@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## Welcome to The CyberPeak!
 
-You can use the [editor on GitHub](https://github.com/alexsbc303/alexsbc303.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
+Many people said that "If you haven’t been up The Peak, you haven’t been to Hong Kong.". In order to provide preliminary experience for attracting visitors, the purpose of the project was to build a cyberworld of one of the most famous Hong Kong's tourist spot - "The Peak". 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A realistic 3D environment of the whole attraction was built. Worked together with another project mate, the product revealed the details of three symbols of the spot: 
+- Peak Tower
+- Peak Tram 
+- Victoria Peak
 
-### Markdown
+The implemented methodologies include three aspects:
+- A 3D modelling software - "Blender" was used to create the required 3D objects. 
+- A 3D game development platform - "Unity" was used to integrate the 3D objects, perform movement and interactions, and build the whole world. 
+- A Javascript API - "WebGL" was used to render the interactive 3D cyberworld to web browsers without usage of any plugins. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The result of the project can bring a fruitful experience to people by three reasons: 
+- Realistic attempt of Peak Tram riding
+- Navigate freely around Peak Tower
+- 360-degree sightseeing from different viewpoints. It is hoped that this project can help foreigners know more about The Peak.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alexsbc303/alexsbc303.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Demo
+<https://bit.ly/2VetImh>
