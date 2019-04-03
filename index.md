@@ -1,4 +1,4 @@
-## Welcome to The CyberPeak!
+# Welcome to The CyberPeak!
 
 ## Project Information
 - Student No:	54412731
